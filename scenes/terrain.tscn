@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtbgg7lgdjsqx"]
+
+[ext_resource type="Script" uid="uid://dm1f6wkddj0gu" path="res://scenes/terrain.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://dfqxof1vfm8vr" path="res://Screenshots/screenshot - Edited.png" id="2_oqplg"]
+
+[node name="Terrain" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Background" type="Polygon2D" parent="."]
+visible = false
+color = Color(0, 0.329412, 0.356863, 1)
+antialiased = true
+polygon = PackedVector2Array(-1561.31, -924.348, 3929.55, -929.148, 3929.55, 2368.24, -1551.71, 2373.04)
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.498039, 0.345098, 0.239216, 1)
+antialiased = true
+polygon = PackedVector2Array(-675.197, 1577.39, -519.603, 264.492, -205.313, 25.0337, 76.9055, 127.659, 227.999, 700.02, 529.12, 792.919, 782.19, 696.817, 1044.87, 776.902, 1044.87, 555.867, 1134.57, 498.205, 1281.92, 507.816, 1288.33, 350.848, 1426.08, 379.679, 1426.08, 190.677, 1571.83, 177.461, 1501.61, 673.531, 1671.5, 684.856, 1764.37, 508.174, 1891.22, 483.257, 1999.95, 37.0217, 2410.97, 40.2811, 2415.93, 1609.79)
+
+[node name="Destructible" type="StaticBody2D" parent="." groups=["Destructibles"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Destructible"]
+polygon = PackedVector2Array(775.231, 1077.43, 1277.52, 974.692, 1671.2, 880.746, 1483, 1325.72)
+
+[node name="ScreenshotEdited" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1404, 529)
+texture = ExtResource("2_oqplg")
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+visible = false
+offset = Vector2(1404, 529)
+antialiased = true
+polygon = PackedVector2Array(1400, 540, 1400, -510, 1219, -510, 1219, -509, 1200.9, -509, 1196, -501.6, 1196, -299.8, 1200, -297.8, 1200, -296, 1209, -296, 1209, -295, 1256, -295, 1256, -290, 899, -288, 899, -287.1, 475, -288, 461.9, -288, 456.9, -280, 455, -280, 455, 51, -321, 52, -336, 52, -335, -272, -335, -277, -336, -277, -336, -285.1, -339, -287.1, -339, -289, -496, -288, -499, -288, -505, -279.6, -505, -130, -562, -129, -562, -128.1, -801, -129, -816, -129, -817, -282, -817, -285.4, -822, -287.4, -822, -289, -1076, -289, -1076, -420.8, -1082, -426.8, -1082, -429, -1301.1, -429, -1303.1, -426, -1305, -426, -1305, -416, -1306, -416, -1306, -289.9, -1318.1, -289, -1400, -289, -1400, 540)

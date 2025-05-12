@@ -1,0 +1,7 @@
+res://scenes/terrain.tscn
+res://scenes/terrain.gd
+res://scenes/game.tscn
+res://scenes/player.tscn
+res://scenes/bullet.tscn
+res://scenes/player.gd
+res://scenes/game.gd
